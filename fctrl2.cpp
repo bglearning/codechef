@@ -28,15 +28,21 @@ int main(){
                             int tmp = values[index] * j + carry;
                             values[index] = tmp%1000000;
                             carry = tmp/1000000;
-                            if(index>maxIndex)maxIndex = index;
+                            if(index>maxIndex){
+                                    maxIndex = index;
+                            }
                             index++;
-                        }while(carry!=0);
+                            if(index > maxIndex and carry == 0){break;}
+                        }while(1);
                 }
 
 
                 for(int j=maxIndex; j>=0 ; --j){
 
-                        int dgCnt = log10(values[j]);
+                        int dgCnt; 
+                        if(values[j] == 0){ dgCnt = 0; }
+                        else{ dgCnt = log10(values[j]);} 
+                        
                         int zeroCnt = 5 - dgCnt;
 
                         if( j != maxIndex){
@@ -47,6 +53,8 @@ int main(){
                         }
                         std::cout<<values[j];
                 }
+
+                std::cout<<'\n';
                 
         }
 
