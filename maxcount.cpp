@@ -38,8 +38,8 @@ int main(){
                                 maxNum = num;
                                 maxNumCnt = cVal;
                         }else if(cVal == maxNumCnt){
-                                if(cVal < maxNum){
-                                        maxNum = cVal;
+                                if(num < maxNum){
+                                        maxNum = num;
                                 }
                         }
 
@@ -50,15 +50,3 @@ int main(){
         }
         return 0;
 }
-
-
-
-aa something
-aa something
-aa something
-aa something
-aa something
-aa something
-aa something
-aa something
-aa something
